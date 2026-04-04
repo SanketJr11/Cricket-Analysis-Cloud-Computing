@@ -30,6 +30,7 @@ python3 "$PY_SCRIPT" 2>&1 | tee -a "$LOG_FILE"
 
 # Log end
 echo "END:   $(date -u '+%Y-%m-%d %H:%M:%S') UTC" | tee -a "$LOG_FILE"
+sleep 120
 
 # Helper: check file exists
 check_file () {
