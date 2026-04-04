@@ -28,9 +28,10 @@ echo "START: $(date -u '+%Y-%m-%d %H:%M:%S') UTC" | tee "$LOG_FILE"
 # Run KPI script (capture stdout+stderr into log)
 python3 "$PY_SCRIPT" 2>&1 | tee -a "$LOG_FILE"
 
+sleep 120
 # Log end
 echo "END:   $(date -u '+%Y-%m-%d %H:%M:%S') UTC" | tee -a "$LOG_FILE"
-sleep 120
+
 
 # Helper: check file exists
 check_file () {
